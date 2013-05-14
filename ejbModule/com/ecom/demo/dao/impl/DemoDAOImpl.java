@@ -8,7 +8,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import com.ecom.common.dao.AbstractDAO;
 import com.ecom.demo.bo.Demo;
 import com.ecom.demo.dao.DemoDAO;
 
