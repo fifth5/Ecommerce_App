@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping package="com.ecom.book.po">
+		<class name="ProductBook" table="t_book">
+			<id name="productbookId" column="book_id">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="isbn" column="isbn"></property>
+			<property name="publishDate" column="publish_date"></property>
+			<property name="publishCount" column="publish_count"></property>
+			<property name="pageNbr" column="page_nbr"></property>
+			<property name="wordNbr" column="word_nbr"></property>
+			<property name="printDate" column="print_date"></property>
+			<property name="booksize" column="booksize"></property>
+			<property name="paper" column="paper"></property>
+			<property name="printCount" column="print_count"></property>
+			<property name="pack" column="pack"></property>
+			<property name="language" column="language"></property>
+			<property name="recomcontent" column="recomcontent"></property>
+			<property name="bookcategrory" column="bookcategrory"></property>
+			<property name="preview" column="preview"></property>
+			<property name="introduction" column="introduction"></property>
+			<set name="authors" table="t_book_author">
+				<key column="book_id"></key>
+				<many-to-many class="Author" column="author_id"></many-to-many>
+			</set>
+			<set name="presses" table="t_book_press">
+				<key column="book_id"></key>
+				<many-to-many class="Press" column="press_id"></many-to-many>
+			</set>
+			<list name="comments" table="t_book_comment" cascade="all">
+				<key column="book_id"></key>
+				<list-index column="time"></list-index>
+				<one-to-many class="Comment"/>
+			</list>
+			<one-to-one name="product" cascade="all" property-ref="productInfo"></one-to-one>
+		</class>
+	</hibernate-mapping>
