@@ -7,6 +7,7 @@
 			<id name="pictureId" column="picture_id">
 				<generator class="uuid.hex"></generator>
 			</id>
-			<property name="pricutreUrl" column="picture_url"></property>
+			<property name="pictureUrl" column="picture_url" length="255"></property>
+			<property name="pictureInfo" column="picture_info" length="1000"></property>
 		</class>
 	</hibernate-mapping>

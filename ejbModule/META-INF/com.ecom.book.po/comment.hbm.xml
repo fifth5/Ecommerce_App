@@ -7,9 +7,10 @@
 		<id name="commentId" column="comment_id">
 			<generator class="uuid.hex"></generator>
 		</id>
-		<property name="content" column="content"></property>
-		<property name="username" column="username"></property>
-		<property name="time" column="time"></property>
-		<property name="userIP" column="userIP"></property>
+		<property name="content" column="content" length="1000"></property>
+		<property name="userName" column="user_name" length="50"></property>
+		<property name="commentTime" column="comment_time"></property>
+		<property name="userIP" column="user_IP" length="50"></property>
+		<property name="fatherCommentId" column="fathercommentid"></property>
 	</class>
 </hibernate-mapping>

@@ -8,12 +8,12 @@
 			<id name="authorId" column="author_id">
 				<generator class="uuid.hex"></generator>
 			</id>
-			<property name="authorName" column="author_name"></property>
-			<property name="nationality" column="nationality"></property>
-			<property name="introduction" column="introduction"></property>
+			<property name="authorName" length="50" column="author_name"></property>
+			<property name="authorNation" length="50" column="author_nation"></property>
+			<property name="authorInfo" length="1000" column="author_info"></property>
 			<set name="books" table="t_book_author" lazy="false">
 				<key column="author_id"></key>
-				<many-to-many class="ProductBook" column="book_id"></many-to-many>
+				<many-to-many class="Book" column="book_id"></many-to-many>
 			</set>			
 		</class>
 	</hibernate-mapping>

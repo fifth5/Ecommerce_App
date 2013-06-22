@@ -1,58 +1,72 @@
 package com.ecom.book.po;
 
+import java.io.Serializable;
 import java.util.Set;
 
-public class Author {
+public class Author implements Serializable {
 
 	/**
 	 * authorId 作者编号
 	 */
 	private String authorId;
+	
 	/**
 	 * authorName 作者姓名
 	 */
 	private String authorName;
+	
 	/**
-	 * nationality 国籍
+	 * authorNation 国籍
 	 */
-	private String nationality;
+	private String authorNation;
+	
 	/**
-	 * introduction 作者简介
+	 * authorInfo 作者简介
 	 */
-	private String introduction;
+	private String authorInfo;
+	
 	/**
 	 * books 某一作者写的书
 	 */
-	private Set<ProductBook> books;
+	private Set<Book> books;
 	
 	public String getAuthorId() {
 		return authorId;
 	}
+	
 	public void setAuthorId(String authorId) {
 		this.authorId = authorId;
 	}
+	
 	public String getAuthorName() {
 		return authorName;
 	}
+	
 	public void setAuthorName(String authorName) {
 		this.authorName = authorName;
 	}
-	public String getNationality() {
-		return nationality;
+	
+	public String getAuthorNation() {
+		return authorNation;
 	}
-	public void setNationality(String nationality) {
-		this.nationality = nationality;
+	
+	public void setAuthorNation(String authorNation) {
+		this.authorNation = authorNation;
 	}
-	public String getIntroduction() {
-		return introduction;
+	
+	public String getAuthorInfo() {
+		return authorInfo;
 	}
-	public void setIntroduction(String introduction) {
-		this.introduction = introduction;
+	
+	public void setAuthorInfo(String authorInfo) {
+		this.authorInfo = authorInfo;
 	}
-	public Set<ProductBook> getBooks() {
+	
+	public Set<Book> getBooks() {
 		return books;
 	}
-	public void setBooks(Set<ProductBook> books) {
+	
+	public void setBooks(Set<Book> books) {
 		this.books = books;
 	}
 	

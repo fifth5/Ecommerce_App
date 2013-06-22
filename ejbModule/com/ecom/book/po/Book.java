@@ -5,208 +5,266 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-public class ProductBook implements Serializable{
+public class Book implements Serializable {
 
 	/**
-	 * productbookId 图书详细信息编号
+	 * bookId 图书详细信息编号
 	 */
-	private String productbookId;
+	private String bookId;
+
 	/**
 	 * isbn 图书ISBN号
 	 */
 	private String isbn;
+
 	/**
 	 * publishDate 出版日期
 	 */
 	private Date publishDate;
+
 	/**
-	 * publishCount 版次
+	 * publishEdition 版次
 	 */
-	private int publishCount;
+	private int publishEdition;
+
 	/**
-	 * pageNbr 页数
+	 * pageCount 页数
 	 */
-	private int pageNbr;
+	private int pageCount;
+
 	/**
-	 * wordNbr 字数
+	 * wordCount 字数
 	 */
-	private float wordNbr;
+	private long wordCount;
+
 	/**
 	 * printDate 印刷日期
 	 */
 	private Date printDate;
+
 	/**
 	 * bookSize 开本
 	 */
-	private String booksize;
+	private String bookSize;
+
 	/**
 	 * paper 纸张
 	 */
 	private String paper;
+
 	/**
 	 * printCount 印刷次数
 	 */
 	private int printCount;
+
 	/**
 	 * pack 包装
 	 */
 	private String pack;
+
 	/**
 	 * language 语言
 	 */
 	private String language;
+
 	/**
 	 * recomcontent 内容推荐
 	 */
 	private String recomcontent;
+
 	/**
-	 * bookcategory 图书目录
+	 * chapters 图书目录
 	 */
-	private String bookcategrory;
+	private String chapters;
+
 	/**
-	 * preview 试读章节
+	 * preContent 试读章节
 	 */
-	private String preview;
+	private String preContent;
+
 	/**
-	 * introduction 图书介绍
+	 * bookInfo 图书介绍
 	 */
-	private String introduction;
+	private String bookInfo;
+
 	/**
 	 * authors 作者
 	 */
 	private Set<Author> authors;
+
 	/**
 	 * presses 出版社
 	 */
-	private Set<Press> presses;
+	private Set<Publisher> publishers;
+
 	/**
 	 * comments 图书评论
 	 */
 	private List<Comment> comments;
+
 	/**
-	 * product 商品信息
+	 * goods 商品信息
 	 */
-	private Product product;
-	
-	public String getProductbookId() {
-		return productbookId;
+	private Goods goods;
+
+	public String getBookId() {
+		return bookId;
 	}
-	public void setProductbookId(String productbookId) {
-		this.productbookId = productbookId;
+
+	public void setBookId(String bookId) {
+		this.bookId = bookId;
 	}
+
 	public String getIsbn() {
 		return isbn;
 	}
+
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
+
 	public Date getPublishDate() {
 		return publishDate;
 	}
+
 	public void setPublishDate(Date publishDate) {
 		this.publishDate = publishDate;
 	}
-	public int getPublishCount() {
-		return publishCount;
+
+	public int getPublishEdition() {
+		return publishEdition;
 	}
-	public void setPublishCount(int publishCount) {
-		this.publishCount = publishCount;
+
+	public void setPublishEdition(int publishEdition) {
+		this.publishEdition = publishEdition;
 	}
-	public int getPageNbr() {
-		return pageNbr;
+
+	public int getPageCount() {
+		return pageCount;
 	}
-	public void setPageNbr(int pageNbr) {
-		this.pageNbr = pageNbr;
+
+	public void setPageCount(int pageCount) {
+		this.pageCount = pageCount;
 	}
-	public float getWordNbr() {
-		return wordNbr;
+
+	public long getWordCount() {
+		return wordCount;
 	}
-	public void setWordNbr(float wordNbr) {
-		this.wordNbr = wordNbr;
+
+	public void setWordCount(long wordCount) {
+		this.wordCount = wordCount;
 	}
+
 	public Date getPrintDate() {
 		return printDate;
 	}
+
 	public void setPrintDate(Date printDate) {
 		this.printDate = printDate;
 	}
-	public String getBooksize() {
-		return booksize;
+
+	public String getBookSize() {
+		return bookSize;
 	}
-	public void setBooksize(String booksize) {
-		this.booksize = booksize;
+
+	public void setBookSize(String bookSize) {
+		this.bookSize = bookSize;
 	}
+
 	public String getPaper() {
 		return paper;
 	}
+
 	public void setPaper(String paper) {
 		this.paper = paper;
 	}
+
 	public int getPrintCount() {
 		return printCount;
 	}
+
 	public void setPrintCount(int printCount) {
 		this.printCount = printCount;
 	}
+
 	public String getPack() {
 		return pack;
 	}
+
 	public void setPack(String pack) {
 		this.pack = pack;
 	}
+
 	public String getLanguage() {
 		return language;
 	}
+
 	public void setLanguage(String language) {
 		this.language = language;
 	}
+
 	public String getRecomcontent() {
 		return recomcontent;
 	}
+
 	public void setRecomcontent(String recomcontent) {
 		this.recomcontent = recomcontent;
 	}
-	public String getBookcategrory() {
-		return bookcategrory;
+
+	public String getChapters() {
+		return chapters;
 	}
-	public void setBookcategrory(String bookcategrory) {
-		this.bookcategrory = bookcategrory;
+
+	public void setChapters(String chapters) {
+		this.chapters = chapters;
 	}
-	public String getPreview() {
-		return preview;
+
+	public String getPreContent() {
+		return preContent;
 	}
-	public void setPreview(String preview) {
-		this.preview = preview;
+
+	public void setPreContent(String preContent) {
+		this.preContent = preContent;
 	}
-	public String getIntroduction() {
-		return introduction;
+
+	public String getBookInfo() {
+		return bookInfo;
 	}
-	public void setIntroduction(String introduction) {
-		this.introduction = introduction;
+
+	public void setBookInfo(String bookInfo) {
+		this.bookInfo = bookInfo;
 	}
+
 	public Set<Author> getAuthors() {
 		return authors;
 	}
+
 	public void setAuthors(Set<Author> authors) {
 		this.authors = authors;
 	}
-	public Set<Press> getPresses() {
-		return presses;
+
+	public Set<Publisher> getPublishers() {
+		return publishers;
 	}
-	public void setPresses(Set<Press> presses) {
-		this.presses = presses;
+
+	public void setPublishers(Set<Publisher> publishers) {
+		this.publishers = publishers;
 	}
-	public Product getProduct() {
-		return product;
-	}
-	public void setProduct(Product product) {
-		this.product = product;
-	}
+
 	public List<Comment> getComments() {
 		return comments;
 	}
+
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
-	
+
+	public Goods getGoods() {
+		return goods;
+	}
+
+	public void setGoods(Goods goods) {
+		this.goods = goods;
+	}
+
 }
