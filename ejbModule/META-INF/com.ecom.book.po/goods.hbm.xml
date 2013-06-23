@@ -5,7 +5,7 @@
 
 <hibernate-mapping package="com.ecom.book.po">
 	<class name="Goods" table="t_goods">
-		<id name="goodsId" column="good_id">
+		<id name="goodsId" column="goods_id">
 			<generator class="uuid.hex"></generator>
 		</id>
 		<property name="goodsNo" column="goods_no" length="100"></property>
