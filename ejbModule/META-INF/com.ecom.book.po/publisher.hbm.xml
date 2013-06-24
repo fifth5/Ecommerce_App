@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping package="com.ecom.book.po">
+		<class name="Publisher" table="t_publisher">
+			<id name="publisherId" column="publisher_id">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="publisherName" column="publisher_name" length="100"></property>
+			<property name="publisherInfo" column="publisher_info" length="1000"></property>
+			<set name="books" table="t_book_publisher" lazy="false">
+				<key column="publisher_id"></key>
+				<many-to-many class="Book" column="book_id"></many-to-many>
+			</set>
+		</class>
+	</hibernate-mapping>

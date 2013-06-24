@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ecom.book.po">
+	<class name="Comment" table="t_comment">
+		<id name="commentId" column="comment_id">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<property name="content" column="content" length="1000"></property>
+		<property name="userName" column="user_name" length="50"></property>
+		<property name="commentTime" column="comment_time"></property>
+		<property name="userIP" column="user_IP" length="50"></property>
+		<property name="fatherCommentId" column="fathercommentid"></property>
+	</class>
+</hibernate-mapping>
