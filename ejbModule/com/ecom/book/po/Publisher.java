@@ -3,6 +3,8 @@ package com.ecom.book.po;
 import java.io.Serializable;
 import java.util.Set;
 
+import org.apache.struts2.json.annotations.JSON;
+
 public class Publisher implements Serializable{
 
 	/**
@@ -48,6 +50,7 @@ public class Publisher implements Serializable{
 		this.publisherInfo = publisherInfo;
 	}
 	
+	@JSON(serialize=false)
 	public Set<Book> getBooks() {
 		return books;
 	}

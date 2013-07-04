@@ -9,7 +9,7 @@
 			</id>
 			<property name="publisherName" column="publisher_name" length="100"></property>
 			<property name="publisherInfo" column="publisher_info" length="1000"></property>
-			<set name="books" table="t_book_publisher" lazy="false">
+			<set name="books" table="t_book_publisher" lazy="true">
 				<key column="publisher_id"></key>
 				<many-to-many class="Book" column="book_id"></many-to-many>
 			</set>
