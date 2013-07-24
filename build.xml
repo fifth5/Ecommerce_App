@@ -98,7 +98,7 @@
 	</target>
 
 	<target name="deploy" depends="ejbjar" description="发布EJB">
-		<move file="${basedir}/${ant.project.name}.jar" todir="D:/java/ecommerce/wspace/Ecommerce_Web/WebRoot/WEB-INF/lib" />
+		<move file="${basedir}/${ant.project.name}.jar" todir="D:/wspace/Ecommerce_Web/WebRoot/WEB-INF/lib" />
 	</target>
 <!--
 	<target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects" />
